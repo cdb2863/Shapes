@@ -11,5 +11,6 @@ public:
     int getBase();
     int getHeight();
     bool isSquare();
+    void printInfo();
 };
 
