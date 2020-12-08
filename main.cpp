@@ -1,14 +1,15 @@
 #include <iostream>
 #include <vector>
 #include "Rectangle.h"
+#include "Circle.h"
 using namespace std;
 
 // Prototypes
 void testRectangle(Rectangle);
-void testVector(int);
+void rectangleVector(int);
 
 int main() {
-    testVector(10);
+    return 0;
 }
 
 void testRectangle(Rectangle r) {
@@ -25,7 +26,7 @@ void testRectangle(Rectangle r) {
     cout << endl;
 }
 
-void testVector(int nIterations) {
+void rectangleVector(int nIterations) {
     vector<Rectangle> rVector;
     for(int i = 0; i < nIterations; i++) {
         Rectangle newRectangle(i+1, i+1);
