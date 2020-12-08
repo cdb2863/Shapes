@@ -21,7 +21,7 @@ void Circle::setRadius(double r) {
 
 // Other Methods
 double Circle::getArea() {
-    return pow((M_PI * this->radius),2);
+    return M_PI * (pow(this->radius, 2));
 }
 
 double Circle::getCircumference() {
@@ -37,4 +37,5 @@ void Circle::printInfo() {
     std::cout << "This circle's area is: " << this->getArea() << "." << std::endl;
     std::cout << "This circle's circumference is: " << this->getCircumference() << "." << std::endl;
     std::cout << "This circle's diameter is: " << this->getDiameter() << "." << std::endl;
+    std::cout << std::endl;
 }
