@@ -2,15 +2,19 @@
 #include <vector>
 #include "Rectangle.h"
 #include "Circle.h"
+#include "Triangle.h"
 using namespace std;
 
 // Prototypes
 void rectangleVector(int);
 void circleVector(int);
+void triangleVector(int);
 
 int main() {
-    rectangleVector(5);
-    circleVector(5);
+    int iterations = 1;
+    rectangleVector(iterations);
+    circleVector(iterations);
+    triangleVector(iterations);
     return 0;
 }
 
@@ -34,6 +38,18 @@ void circleVector(int nIterations) {
     }
 
     for(auto i = cVector.begin(); i != cVector.end(); i++) {
+        (*i).printInfo();
+    }
+}
+
+void triangleVector(int nIterations) {
+    vector<Triangle> tVector;
+    for(int i = 0; i < nIterations; i++) {
+        Triangle newTriangle(i + 1, i + 1);
+        tVector.push_back(newTriangle);
+    }
+
+    for(auto i = tVector.begin(); i != tVector.end(); i++) {
         (*i).printInfo();
     }
 }
